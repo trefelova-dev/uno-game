@@ -1,10 +1,9 @@
 import { createCard } from "./cards";
-import type { Card, CardColor, NumberValue, ActionValue, WildValue } from "@/types/game";
+import type { Card, CardColor, NumberValue, ActionValue } from "@/types/game";
 
 const COLORS: CardColor[] = ["red", "blue", "green", "yellow"];
 const NUMBER_VALUES: NumberValue[] = ['0','1','2','3','4','5','6','7','8','9'];
 const ACTION_VALUES: ActionValue[] = ['skip','reverse','draw-two'];
-const WILD_VALUES: WildValue[] = ['wild','wild-draw-four'];
 
 export const createDeck = (): Card[] => {
   const deck: Card[] = [];

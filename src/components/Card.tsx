@@ -33,7 +33,6 @@ const Card = ({
   const displayColor = card.kind === 'wild' && card.chosenColor ? card.chosenColor : card.color;
   const bgColorClass = getCardColorClass(displayColor);
   const textColor = displayColor === 'wild' ? 'text-white' : 'text-black';
-  const isWild = displayColor === 'wild';
 
   return (
     <div

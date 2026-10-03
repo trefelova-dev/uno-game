@@ -90,7 +90,7 @@ const GameBoard = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-100 to-green-100 p-4 flex flex-col xl:flex-row overflow-hidden">
+        <div className="min-h-screen bg-transparent p-4 flex flex-col xl:flex-row overflow-hidden">
             <style>{`
                 @keyframes drawPlayer { from { opacity: 0; transform: translate(0, -300px) scale(0.2); } }
                 @keyframes drawTop { from { opacity: 0; transform: translate(0, 300px) scale(0.2); } }
@@ -103,9 +103,8 @@ const GameBoard = () => {
                 .animate-draw-right { animation: drawRight 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards; }
             `}</style>
 
-            {/* Сайдбар: Название и кнопка */}
             <div className="flex flex-col items-center xl:items-start xl:w-64 mb-8 xl:mb-0 xl:pt-12 xl:pl-8 shrink-0">
-                <h1 className="text-5xl font-black text-gray-800 mb-8 drop-shadow-sm tracking-tighter">UNO</h1>
+                <h1 className="text-5xl font-black text-white mb-8 drop-shadow-sm tracking-tighter">UNO</h1>
                 <button 
                     onClick={() => dispatch({ type: 'START_GAME' })}
                     className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-2xl shadow-lg transition-transform hover:scale-105 active:scale-95 w-full max-w-[200px]"
